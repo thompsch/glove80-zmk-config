@@ -306,8 +306,9 @@
         };
 
     };
+};
 
-    {
+/ {
     combos {
         compatible = "zmk,combos";
         combo_screen_left {
@@ -322,5 +323,4 @@
             bindings = <&kp LCTRL RIGHT>;
         };
     };
-    
 };
