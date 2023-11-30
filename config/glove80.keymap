@@ -58,6 +58,26 @@
             bindings
                 = <&rgb_ug RGB_STATUS>;
         };
+        screen_left: screen_left {
+            label = "SCREEN_LEFT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <2>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        screen_right: screen_right {
+            label = "SCREEN_RIGHT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <3>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
     };
 };
 
@@ -263,23 +283,21 @@
 
     /* Custom Defined Behaviors */
 / {
-    
-};
-
-/ combos {
-    compatible = "zmk,combos";
-    combo_screen_left {
-        timeout-ms = <50>;
-        key-positions = <2>;
-        bindings = <&kp LCTRL LEFT>;
-    };
-    combo_screen_right {
-        timeout-ms = <50>;
-        key-positions = <3>;
-        bindings = <&kp LCTRL RIGHT>;
+    / {
+    macros {
+        screen_left: zed_em_kay {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
     };
 };
-
+};
     /* Automatically generated keymap */
 / {
     keymap {
