@@ -266,6 +266,20 @@
     
 };
 
+/ combos {
+    compatible = "zmk,combos";
+    combo_screen_left {
+        timeout-ms = <50>;
+        key-positions = <2>;
+        bindings = <&kp LCTRL LEFT>;
+    };
+    combo_screen_right {
+        timeout-ms = <50>;
+        key-positions = <3>;
+        bindings = <&kp LCTRL RIGHT>;
+    };
+};
+
     /* Automatically generated keymap */
 / {
     keymap {
@@ -305,22 +319,5 @@
             >;
         };
 
-    };
-};
-
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_screen_left {
-            timeout-ms = <50>;
-            key-positions = <2>;
-            bindings = <&kp LCTRL LEFT>;
-        };
-
-        combo_screen_right {
-            timeout-ms = <50>;
-            key-positions = <3>;
-            bindings = <&kp LCTRL RIGHT>;
-        };
     };
 };
