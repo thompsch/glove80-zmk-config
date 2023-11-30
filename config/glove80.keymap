@@ -283,7 +283,6 @@
 
     /* Custom Defined Behaviors */
 / {
-    / {
     macros {
         screen_left: zed_em_kay {
             label = "ZM_zed_em_kay";
@@ -296,7 +295,6 @@
                 ;
         };
     };
-};
 };
     /* Automatically generated keymap */
 / {
